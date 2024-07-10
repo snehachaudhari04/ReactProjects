@@ -9,15 +9,20 @@ import CandidateHome from './Components/CandidateHome/CandidateHome';
 function App() {
   return (
    <>
-   {/* <Router>
+   <BrowserRouter>
+   
       <Routes>
-        <Route path="/" element={<IndexPage/>} />
-        <Route path="/login" element={<LoginPage/>} />
+        <Route exact path="/" element={<IndexPage/>} />
       </Routes>
-    </Router>
-    <IndexPage/>
-    <LoginPage/> */}
-    <CandidateHome/>
+      <Routes>
+        <Route exact path="/Login" element={<LoginPage/>} />
+      </Routes>
+      <Routes>
+        <Route exact path="/CandidateHomePage" element={<CandidateHome/>} />
+      </Routes>
+    
+      </BrowserRouter>
+   
    
    </>
   );

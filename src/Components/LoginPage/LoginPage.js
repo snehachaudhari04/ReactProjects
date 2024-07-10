@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import './../IndexPage/IndexPage.css'
 import './LoginPage.css'
+import { Router, Routes, useNavigate ,Route} from 'react-router-dom'
+
 
  function LoginPage() {
+       const navigate= useNavigate();
+  
      const[Values,setValues]=useState(
       {
         name:"",
@@ -13,6 +17,7 @@ import './LoginPage.css'
       setValues({...Values,[e.target.name]: e.target.value})
      }
      function ValidateUser(){
+      
         if(!Values.name){
           alert("please enter unseranme")
         }
@@ -20,7 +25,7 @@ import './LoginPage.css'
           alert("please enter Password")
         }
         if(Values.name=="admin" && Values.password =="123"){
-          alert("Login sucessfuly")
+          navigate("/CandidateHomePage")
         }
         else{
           alert("Invalid Credentials")

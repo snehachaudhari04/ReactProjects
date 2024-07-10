@@ -1,18 +1,26 @@
 import React, { useState } from 'react';
 import './CandidateHome.css'; 
+import { useNavigate } from 'react-router-dom';
 
 
 const CandidateHome = () => {
+    const navigate =useNavigate()
   const [referrals, setReferrals] = useState([
     // Sample data
     { id: 'r1', name: 'John Doe' },
     { id: 'r2', name: 'Jane Smith' },
+    { id: 'r3', name: 'Jos Buttler' },
+    { id: 'r4', name: 'Kane shane' },
+    { id: 'r5', name: 'keirson beto' },
   ]);
 
   const [services, setServices] = useState([
     // Sample data
     { id: 's1', name: 'Resume Review' },
     { id: 's2', name: 'Interview Coaching' },
+    { id: 's2', name: 'Refferal Support' },
+    { id: 's2', name: 'One to One session' },
+    
   ]);
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,12 +30,14 @@ const CandidateHome = () => {
   };
 
   const handleLogout = () => {
-    // Implement logout functionality
+    navigate("/")
     console.log('Logged out');
   };
 
   return (
     <div className="c-container">
+        
+    <button className="btn2" onClick={handleLogout}>LOG<br></br>OUT</button>
       <input className='input'
         type="text"
         placeholder="Search by referral or service ID"
@@ -41,7 +51,7 @@ const CandidateHome = () => {
             {referrals
               .filter((referral) => referral.id.includes(searchTerm))
               .map((referral) => (
-                <li key={referral.id}>{referral.name}</li>
+                <ul key={referral.id}>{referral.id} :  {referral.name}</ul>
               ))}
           </ul>
         </div>
@@ -51,12 +61,12 @@ const CandidateHome = () => {
             {services
               .filter((service) => service.id.includes(searchTerm))
               .map((service) => (
-                <li key={service.id}>{service.name}</li>
+                <ul key={service.id}>{service.id} :  {service.name}</ul>
               ))}
           </ul>
         </div>
       </div>
-      <button className="btn" onClick={handleLogout}>Logout</button>
+      
     </div>
   );
 };

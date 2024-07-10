@@ -4,6 +4,11 @@ import { useNavigate } from 'react-router-dom';
 import SearchComponenet from '../SearchComponenet';
 
 function IndexPage() {
+  const navigate = useNavigate()
+
+  function handleClick(){
+    navigate("/Login")
+  }
   
 
   return (
@@ -15,7 +20,7 @@ function IndexPage() {
      <h1 className='index-text'>DISCOVER YOUR  DREAM</h1> 
      <h1 className='index-text'> JOB WITH WORKAI</h1> 
      <h1 className='index-text-orange'>WHERE CONNCETION LEADES TO CARRER</h1>
-     <button className='btn'>Login</button>
+     <button className='btn' onClick={handleClick}>Login</button>
     
      </div>
      </div>
