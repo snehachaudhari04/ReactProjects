@@ -1,0 +1,45 @@
+.index-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    
+}
+.index-text{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+.index-text-orange{
+    color: orange;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+.index-left{
+    width: 50%;
+    
+}
+.index-right{
+    width: 50%;
+}
+.index-img{
+    height: 30rem;
+    width: 25rem;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.all-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.btn{
+  font-size: 2rem;
+  background-color: orange;
+  color: white;
+  border-radius: 10%;
+  width: 8rem;
+}

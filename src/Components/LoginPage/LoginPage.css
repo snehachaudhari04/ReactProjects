@@ -1,0 +1,8 @@
+.login-input{
+    height: 3rem;
+    width: 15rem;
+    margin: 10px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: white;
+}

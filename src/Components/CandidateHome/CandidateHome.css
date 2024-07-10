@@ -1,0 +1,30 @@
+.card-container {
+    display: flex;
+    justify-content: space-around;
+  }
+.c-container{
+    background-color: black;
+    height: 100vh;
+    color: white;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  .input[type="text"] {
+    margin: 20px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  
+ 
+  
